@@ -13,8 +13,8 @@ public class LoginPage {
     private final String cookieBannerCloseButtonXpath = "//div[@class='cookie-gdpr__action']//button"; // Обновите XPath на кнопку закрытия баннера, если она есть
 
     // Метод для открытия страницы авторизации
-    @Step("Open login page")
-    public void openLoginPage() {
+    @Step("Open Login Page")
+    public void openLoginPageTest() {
         open("https://russiarunning.com/login");
     }
 
@@ -47,7 +47,7 @@ public class LoginPage {
     // Метод для авторизации пользователя
     @Step("Authorization")
     public void login(String email, String password) {
-        openLoginPage();
+        openLoginPageTest();
         closeCookieBanner(); // Закрываем баннер перед авторизацией
         enterEmail(email);
         enterPassword(password);
